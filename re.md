@@ -59,10 +59,10 @@ a (?:dog|cat) 代表 a dog 或 a cat，而 a dog|cat 代表 a dog 或 cat，(?:)
 ```python
 s =  'abc abcde bc bcd'
 re.findall( r'\bbc\b' , s ) 
-['bc']   # \b，单词边界不算在最终结果，无空格字符
+# ['bc']   # \b，单词边界不算在最终结果，无空格字符
 
 re.findall( r'\sbc\s' , s ) 
-[' bc '] # \s，单词边界算在最终结果，有空格字符
+# [' bc '] # \s，单词边界算在最终结果，有空格字符
 ```
 
 ### (?:)
@@ -101,10 +101,10 @@ re.findall( r'\sbc\s' , s )
 ```python
 s =r'/* part 1 */ code /* part 2 */'
 re.findall( r'/\*.*\*/' , s )
-['/* part 1 */ code /* part 2 */'] # 贪婪匹配
+# ['/* part 1 */ code /* part 2 */'] # 贪婪匹配
   
 re.findall( r'/\*.*?\*/' , s ) 
-['/* part 1 */', '/* part 2 */'] # 非贪婪匹配
+# ['/* part 1 */', '/* part 2 */'] # 非贪婪匹配
 ```
 
 ### (?<=…)、(?=…)、(?<!…)、(?!…)
@@ -121,17 +121,17 @@ re.findall( r'/\*.*?\*/' , s )
 ```python
 s=r'/* comment 1 */  code  /* comment 2 */'
 re.findall( r'(?<=/\*).+?(?=\*/)' , s )
-[' comment 1 ', ' comment 2 ']
+# [' comment 1 ', ' comment 2 ']
 
 s = 'aaa111aaa , bbb222 , 333ccc '
 re.findall( r'(?<=[a-z]+)\d+(?=[a-z]+)' , s ) 
-error: look-behind requires fixed-width pattern # 前向界定，非常量，错误案例
+# error: look-behind requires fixed-width pattern # 前向界定，非常量，错误案例
 
 re.findall( r'\d+(?=[a-z]+)', s )
-['111', '333'] # 后向界定，非常量，可行
+# ['111', '333'] # 后向界定，非常量，可行
 
 re.findall( r'\d+(?!\w+)' , s ) # 后向非界定，非常量
-['222']
+# ['222']
 ```
 
 ## 组
@@ -143,7 +143,7 @@ re.findall( r'\d+(?!\w+)' , s ) # 后向非界定，非常量
 ```python
 s = 'aaa111aaa , bbb222 , 333ccc '
 re.findall (r'[a-z]+(\d+)[a-z]+' , s )
-['111']
+# ['111']
 ```
 
 ### (?P\<name\>…)
@@ -157,10 +157,10 @@ re.findall (r'[a-z]+(\d+)[a-z]+' , s )
 ```python
 s='aaa111aaa,bbb222,333ccc,444ddd444,555eee666,fff777ggg'
 re.findall( r'([a-z]+)\d+([a-z]+)' , s ) # 找出中间夹有数字的字母
-[('aaa', 'aaa'), ('fff', 'ggg')]
+# [('aaa', 'aaa'), ('fff', 'ggg')]
 
 re.findall( r'(?P<g1>[a-z]+)\d+(?P=g1)' , s ) # 找出中间夹有数字,且前后两边相同的字母
-['aaa']
+# ['aaa']
 ```
 
 ### \number
@@ -169,9 +169,9 @@ re.findall( r'(?P<g1>[a-z]+)\d+(?P=g1)' , s ) # 找出中间夹有数字,且前�
 
 ```python
 re.findall( r'(?P<g1>[a-z]+)\d+\1' , s ) # 命名组
-['aaa']
+# ['aaa']
 re.findall( r'([a-z]+)\d+\1' , s ) # 未命名组
-['aaa']
+# ['aaa']
 ```
 
 ###**(?(** id/name)yes-pattern|no-pattern)
@@ -181,10 +181,10 @@ re.findall( r'([a-z]+)\d+\1' , s ) # 未命名组
 ```python
 s='<usr1@mail1>  usr2@maill2'
 re.findall( r'(<)?\s*(\w+@\w+)\s*(?(1)>)' , s ) # (?(1)>) 等价 (?(1)>|) 
-[('<', 'usr1@mail1'), ('', 'usr2@maill2')]
+# [('<', 'usr1@mail1'), ('', 'usr2@maill2')]
 
 s='<usr1@mail1>  usr2@maill2 <usr3@mail3   usr4@mail4>  < usr5@mail5 '
-[('<', 'usr1@mail1'), ('', 'usr2@maill2'), ('', 'usr3@mail3'), ('', 'usr4@mail4'), ('', 'usr5@mail5')]
+# [('<', 'usr1@mail1'), ('', 'usr2@maill2'), ('', 'usr3@mail3'), ('', 'usr4@mail4'), ('', 'usr5@mail5')]
 ```
 
 ## 函数
@@ -212,7 +212,7 @@ s='<usr1@mail1>  usr2@maill2 <usr3@mail3   usr4@mail4>  < usr5@mail5 '
 ```python
 s=' I have a dog   ,   you have a dog  ,  he have a dog '
 re.split( '\s*,\s*' , s )
-[' I have a dog', 'you have a dog', 'he have a dog ']
+# [' I have a dog', 'you have a dog', 'he have a dog ']
 ```
 
 ### 取消正则转义
@@ -234,13 +234,29 @@ re.findall( rule , s )
 
 ```python
 s = '3\8' 
-re.findall('(\d+)\\\\', s)  # \\\\ 先字符串转义，转为\\，再正则转义为\
-re.findall(r'(\d+)\\', s) # \\ 直接正则转义为\
+re.findall('\d+\\\\\d+', s)  # \\\\ 先字符串转义，转为\\，再正则转义为\
+re.findall(r'\d+\\\d+', s) # \\ 直接正则转义为\
 ```
 
+## 组与match对象
 
-
-
+```python
+p=re.compile( r'(?P<name>[a-z]+)\s+(?P<age>\d+)\s+(?P<tel>\d+)' , re.I )
+p.groupindex
+# {'age': 2, 'tel': 3, 'name': 1}
+s='Tom 24 88888888 <='
+m=p.search(s)
+m.groups() # 匹配的各组
+# ('Tom', '24', '88888888')
+m.group('name') # 通过名称返回匹配组
+# 'Tom'
+m.group(1) # 通过序号返回匹配组
+# 'Tom'
+m.group(0) # 返回整体的匹配串
+# 'Tom 24 88888888'
+m.group()  # m.group(0) 等价 m.group()
+# 'Tom 24 88888888'
+```
 
 ## 参考资料
 
