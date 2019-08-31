@@ -1,3 +1,7 @@
+---
+description: 树莓派整机指南
+---
+
 # RaspberryPi
 
 ## 1. 刻录系统

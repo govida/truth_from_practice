@@ -1,3 +1,7 @@
+---
+description: 常用命令集
+---
+
 # Linux
 
 ## ps -ef

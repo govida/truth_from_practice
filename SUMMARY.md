@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Introduction](README.md)
+* [写在前面](README.md)
 * [GitBook](gitbook.md)
 * [Linux](linux.md)
 * [Kill GFW](kill_gfw.md)
