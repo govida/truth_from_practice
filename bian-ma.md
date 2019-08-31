@@ -1,20 +1,20 @@
-# 编码问题
+# 编码
 
 ## 1. 基础
 
 常用编码：
 
-- ASCII：支持英文，1 byte
-- GBK：支持中文，2 bytes
-- UTF-8：变长编码，中文 3  bytes，英文 1 byte，用于传输，压缩空间，提高带宽
-- Unicode：2 bytes，用于内存表示，转换快，空间换时间
+* ASCII：支持英文，1 byte
+* GBK：支持中文，2 bytes
+* UTF-8：变长编码，中文 3  bytes，英文 1 byte，用于传输，压缩空间，提高带宽
+* Unicode：2 bytes，用于内存表示，转换快，空间换时间
 
 > 故在内存中，各类字符固定以unicode表示
 
 编码转化：
 
-- 编码（encode）：unicode（内存）——> UTF-8（硬盘）
-- 解码（deocde）：unicode（内存）<—— UTF-8（硬盘）
+* 编码（encode）：unicode（内存）——&gt; UTF-8（硬盘）
+* 解码（deocde）：unicode（内存）&lt;—— UTF-8（硬盘）
 
 ### Python2
 
@@ -38,7 +38,7 @@ print repr(s) #u'\u6797'
 print type(s) #<type 'unicode'>
 
 # s.decode('utf-8') #报错，s为unicode，所以只能encode
-s.encode('utf-8') 
+s.encode('utf-8')
 ```
 
 #### 打印终端
@@ -83,29 +83,29 @@ print(type(s2)) #<class 'bytes'>
 
 相关链接：
 
-- [python编码问题大终结](https://www.cnblogs.com/vipchenwei/p/6993788.html)
+* [python编码问题大终结](https://www.cnblogs.com/vipchenwei/p/6993788.html)
 
 ## 2. Requests
 
 首先，需要明确content与text的区别：
 
-- content：以字节码的形式展示response的body部分
-- text：通过encoding或apparent_encoding对content进行encoding后返回的unicode
+* content：以字节码的形式展示response的body部分
+* text：通过encoding或apparent\_encoding对content进行encoding后返回的unicode
 
-现在我们来看encoding与apparent_encoding的区别：
+现在我们来看encoding与apparent\_encoding的区别：
 
-- encoding：根据response头文件Content-Type中的charset来识别编码，如果没有则默认为ISO-8859-1
-- apparent_encoding：通过chardet对body进行识别，推测编码
+* encoding：根据response头文件Content-Type中的charset来识别编码，如果没有则默认为ISO-8859-1
+* apparent\_encoding：通过chardet对body进行识别，推测编码
 
-默认情况下，由于default encoding=ISO-8859-1的存在，apparent_encoding是不会被系统采用的~
+默认情况下，由于default encoding=ISO-8859-1的存在，apparent\_encoding是不会被系统采用的~
 
 我们在利用text获得encoding的unicode时，可以手动设置encoding，使编码结果正常
 
 相关链接：
 
-- [Request使用指南](https://blog.csdn.net/qq_37616069/article/details/80376776)
-- [Python+Requests编码识别Bug](http://liguangming.com/python-requests-ge-encoding-from-headers.html)
-- [python requests的content和text方法的区别](https://blog.csdn.net/xie_0723/article/details/51361006)
+* [Request使用指南](https://blog.csdn.net/qq_37616069/article/details/80376776)
+* [Python+Requests编码识别Bug](http://liguangming.com/python-requests-ge-encoding-from-headers.html)
+* [python requests的content和text方法的区别](https://blog.csdn.net/xie_0723/article/details/51361006)
 
 ## 3. lxml
 
@@ -118,7 +118,7 @@ print(type(s2)) #<class 'bytes'>
 1. 提供unicode的text供etree处理，这种情况下不会发生乱码
 2. 提供str的text供etree处理，但是要声明这些text是通过什么编码得到的（encoding）
 
-> etree.HTML(text,parser=etree.HTMLParser(encoding='utf-8'))
+> etree.HTML\(text,parser=etree.HTMLParser\(encoding='utf-8'\)\)
 
 注意，这里的是在解析html的第一步就设定了encoding，后续`tostring`等方法上的编码应该保持一致。
 

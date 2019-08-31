@@ -1,4 +1,4 @@
-# Truth From Practice
+# Introduction
 
 实践出真理！
 

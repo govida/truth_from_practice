@@ -11,15 +11,13 @@ baidu一下你就知道，不行就bing一下~
 ### SSH端口被封
 
 1. 利用web界面登陆shell
-
 2. 修改端口（在最后一行`shift`+`g`）
 
-   > vim /etc/ssh/sshd_config
+   > vim /etc/ssh/sshd\_config
 
 3. 重启ssh（两种方案）
-
-   - reboot
-   - /etc/init.d/ssh restart
+   * reboot
+   * /etc/init.d/ssh restart
 
 ## 2. shadowsocks
 
@@ -29,17 +27,17 @@ baidu一下你就知道，不行就bing一下~
 
 1. 下载傻瓜式脚本
 
-   > wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
+   > wget --no-check-certificate -O shadowsocks-all.sh [https://raw.githubusercontent.com/teddysun/shadowsocks\_install/master/shadowsocks-all.sh](https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh)
 
 2. 执行傻瓜脚本，一路default选项下来也可以
 
-   > sh shadowsocks-all.sh 
+   > sh shadowsocks-all.sh
 
 最后记录：
 
-- IP
-- 端口
-- 密码
+* IP
+* 端口
+* 密码
 
 ### 使用
 
@@ -57,21 +55,21 @@ baidu一下你就知道，不行就bing一下~
 
 1. 下载傻瓜式脚本
 
-   > wget --no-check-certificate -O kcptun.sh https://github.com/kuoruan/shell-scripts/raw/master/kcptun/kcptun.sh
+   > wget --no-check-certificate -O kcptun.sh [https://github.com/kuoruan/shell-scripts/raw/master/kcptun/kcptun.sh](https://github.com/kuoruan/shell-scripts/raw/master/kcptun/kcptun.sh)
 
 2. 执行傻瓜脚本，认字就好，注意以下几点：
-
-   - 正确填写shadowsocks的端口（详见上节）
-   - 记录kcptun的服务端口
-   - 记录最后给出的以`key=`开头的命令参数
+   * 正确填写shadowsocks的端口（详见上节）
+   * 记录kcptun的服务端口
+   * 记录最后给出的以`key=`开头的命令参数
 
 ### 使用
 
 1. 替换端口，将原来的shadowsocks的端口，替换为kcptun端口
 2. 启用插件
-   - 插件：填写`kcptun`
-   - 插件选线：填写以`key=`开头的命令参数
+   * 插件：填写`kcptun`
+   * 插件选线：填写以`key=`开头的命令参数
 
 参考链接
 
-- [使用搬瓦工搭建 ShadowSocks 翻墙（VPN）](https://depthlove.github.io/2019/03/29/establish-vpn-server/)
+* [使用搬瓦工搭建 ShadowSocks 翻墙（VPN）](https://depthlove.github.io/2019/03/29/establish-vpn-server/)
+

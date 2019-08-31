@@ -1,11 +1,12 @@
-# Summary
+# Table of contents
 
 * [Introduction](README.md)
-* [RaspberryPi](RaspberryPi.md)
-* [GitBook](GitBook.md)
-* [Linux](Linux.md)
+* [RaspberryPi](raspberrypi.md)
+* [GitBook](gitbook.md)
+* [Linux](linux.md)
 * [Kill GFW](kill_gfw.md)
-* [编码](编码.md)
-* [调度方案](调度方案.md)
-* [lxml速查](lxml速查.md)
+* [编码](bian-ma.md)
+* [调度方案](tiao-du-fang-an.md)
+* [lxml速查](lxml-su-cha.md)
 * [re](re.md)
+
