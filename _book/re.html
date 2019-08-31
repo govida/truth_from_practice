@@ -1,0 +1,526 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>re · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="lxml速查.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="RaspberryPi.html">
+            
+                <a href="RaspberryPi.html">
+            
+                    
+                    RaspberryPi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="GitBook.html">
+            
+                <a href="GitBook.html">
+            
+                    
+                    GitBook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Linux.html">
+            
+                <a href="Linux.html">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="kill_gfw.html">
+            
+                <a href="kill_gfw.html">
+            
+                    
+                    Kill GFW
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="编码.html">
+            
+                <a href="编码.html">
+            
+                    
+                    编码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="调度方案.html">
+            
+                <a href="调度方案.html">
+            
+                    
+                    调度方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="lxml速查.html">
+            
+                <a href="lxml速查.html">
+            
+                    
+                    lxml速查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9" data-path="re.html">
+            
+                <a href="re.html">
+            
+                    
+                    re
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >re</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="re">re</h1>
+<h2 id="&#x57FA;&#x672C;&#x89C4;&#x5219;">&#x57FA;&#x672C;&#x89C4;&#x5219;</h2>
+<h3 id="">[]</h3>
+<p>[ab12] &#x4EE3;&#x8868;a&#x3001;b&#x3001;1&#x3001;2&#x90FD;&#x53EF;&#x4EE5;</p>
+<p><sup><a href="#fn_ab12" id="reffn_ab12">ab12</a></sup> &#x4EE3;&#x8868;&#x9664;&#x4E86;a&#x3001;b&#x3001;1&#x3001;2&#x90FD;&#x53EF;&#x4EE5;</p>
+<p>[a-z] &#x4EE3;&#x8868;a&#x5230;z&#x90FD;&#x53EF;&#x4EE5;</p>
+<h3 id="">|</h3>
+<p>[a-zA-Z]|[0-9] &#x4EE3;&#x8868;&#x5B57;&#x6BCD;&#x6216;&#x6570;&#x5B57;</p>
+<p>[a-z|0-9] &#x4EE3;&#x8868;&#x5B57;&#x6BCD;&#x3001;&#x4E0B;&#x5212;&#x7EBF;&#x3001;&#x6570;&#x5B57;&#xFF0C;&#x5373;|&#x5728;[]&#x91CC;&#x65E0;&#x6548;&#xFF0C;&#x4EE3;&#x8868;&#x5E38;&#x89C4;&#x5B57;&#x7B26;</p>
+<p>dog|cat &#x4EE3;&#x8868; dog &#x548C; cat&#xFF0C;|&#x662F;&#x5BF9;&#x5DE6;&#x53F3;&#x4E24;&#x6761;&#x89C4;&#x5219;&#xFF08;dog&#x548C;cat&#xFF09;&#x8D77;&#x6548;&#xFF0C;&#x5E76;&#x975E;&#x5B57;&#x7B26;&#xFF08;g|c&#xFF09;</p>
+<p>a (?:dog|cat) &#x4EE3;&#x8868; a dog &#x6216; a cat&#xFF0C;&#x800C; a dog|cat &#x4EE3;&#x8868; a dog &#x6216; cat&#xFF0C;(?:)&#x79F0;&#x4E3A;&#x65E0;&#x6355;&#x83B7;&#x7EC4;</p>
+<h3 id="">.</h3>
+<p>&#x9ED8;&#x8BA4;&#x5339;&#x914D;&#x9664;\n&#x5916;&#x7684;&#x6240;&#x6709;&#x5B57;&#x7B26;&#xFF0C;&#x5F53;&#x5728;re.S&#x4E0B;&#xFF0C;&#x4F1A;&#x5339;&#x914D;&#x5305;&#x62EC;\n&#x5728;&#x5185;&#x7684;&#x6240;&#x6709;&#x5B57;&#x7B26;</p>
+<h3 id="&#x3001;">^&#x3001;$</h3>
+<ul>
+<li><p>^&#xFF1A;&#x5339;&#x914D;&#x5F00;&#x5934;&#xFF08;&#x5728;re.M&#x4E0B;&#xFF0C;&#x4F1A;&#x5339;&#x914D;&#x6BCF;&#x884C;&#x884C;&#x9996;&#x90E8;&#xFF09;</p>
+</li>
+<li><p>$&#xFF1A;&#x5339;&#x914D;&#x672B;&#x5C3E;&#xFF08;&#x5728;re.M&#x4E0B;&#xFF0C;&#x4F1A;&#x5339;&#x914D;&#x6BCF;&#x884C;&#x884C;&#x5C3E;&#x90E8;&#xFF09;</p>
+</li>
+</ul>
+<h3 id="d&#x3001;d">\d&#x3001;\D</h3>
+<ul>
+<li>\d&#xFF1A;&#x5339;&#x914D;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#xFF0C;&#x7B49;&#x4EF7;[0-9]</li>
+<li>\D&#xFF1A;&#x5339;&#x914D;&#x4E00;&#x4E2A;&#x975E;&#x6570;&#x5B57;&#xFF0C;&#x7B49;&#x4EF7;[^0-9]</li>
+</ul>
+<h3 id="w&#x3001;w">\w&#x3001;\W</h3>
+<ul>
+<li>\w&#xFF1A;&#x5339;&#x914D;&#x4E00;&#x4E2A;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#x548C;&#x6570;&#x5B57;&#xFF0C;&#x7B49;&#x4EF7;[a-zA-Z0-9]</li>
+<li>\W&#xFF1A;&#x5339;&#x914D;&#x4E00;&#x4E2A;&#x975E;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#x548C;&#x6570;&#x5B57;&#xFF0C;&#x7B49;&#x4EF7;[^a-zA-Z0-9]</li>
+</ul>
+<h3 id="s&#x3001;s">\s&#x3001;\S</h3>
+<ul>
+<li>\s&#xFF1A;&#x5339;&#x914D;&#x4E00;&#x4E2A;&#x7A7A;&#x683C;&#x3001;&#x5236;&#x8868;&#x3001;&#x56DE;&#x8F66;&#x7B49;&#x5206;&#x5272;&#x6709;&#x610F;&#x4E49;&#x7684;&#x5B57;&#x7B26;&#xFF0C;&#x7B49;&#x4EF7;[ \t\r\n\f\v] &#xFF08;&#x6CE8;&#x610F;&#x524D;&#x9762;&#x6709;&#x4E2A;&#x7A7A;&#x683C;&#xFF09;</li>
+<li>\S&#xFF1A;&#x5339;&#x914D;&#x4E00;&#x4E2A;&#x975E;&#x7A7A;&#x683C;&#x3001;&#x5236;&#x8868;&#x3001;&#x56DE;&#x8F66;&#x7B49;&#x5206;&#x5272;&#x6709;&#x610F;&#x4E49;&#x7684;&#x5B57;&#x7B26;&#xFF0C;&#x7B49;&#x4EF7;[^ \t\r\n\f\v] &#xFF08;&#x6CE8;&#x610F;&#x524D;&#x9762;&#x6709;&#x4E2A;&#x7A7A;&#x683C;&#xFF09;</li>
+</ul>
+<h3 id="a&#x3001;z">\A&#x3001;\Z</h3>
+<ul>
+<li><p>\A&#xFF1A;&#x5339;&#x914D;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5F00;&#x5934;&#xFF0C;&#x4E0E;^&#x7684;&#x533A;&#x522B;&#x662F;&#xFF0C;&#x5728;re.M&#x4E0B;&#xFF0C;&#x4E0D;&#x4F1A;&#x5339;&#x914D;&#x6BCF;&#x884C;&#x884C;&#x9996;&#xFF0C;&#x4ECD;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5F00;&#x5934;</p>
+</li>
+<li><p>\Z&#xFF1A;&#x5339;&#x914D;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x7ED3;&#x5C3E;&#xFF0C;&#x4E0E;$&#x7684;&#x533A;&#x522B;&#x662F;&#xFF0C;&#x5728;re.M&#x4E0B;&#xFF0C;&#x4E0D;&#x4F1A;&#x5339;&#x914D;&#x6BCF;&#x884C;&#x884C;&#x5C3E;&#xFF0C;&#x4ECD;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x7ED3;&#x5C3E;</p>
+</li>
+</ul>
+<h3 id="b&#x3001;b">\b&#x3001;\B</h3>
+<ul>
+<li>\b&#xFF1A;&#x5339;&#x914D;&#x5355;&#x8BCD;&#x8FB9;&#x754C;&#xFF0C;&#x4F8B;&#x5982;&#x7A7A;&#x683C;&#xFF0C;&#x4E0E;\s&#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;&#x5728;&#x6700;&#x7EC8;&#x5339;&#x914D;&#x7ED3;&#x679C;&#x4E2D;&#xFF0C;\b&#x5339;&#x914D;&#x7684;&#x5185;&#x5BB9;&#x4E0D;&#x4F1A;&#x5728;&#x6700;&#x7EC8;&#x7ED3;&#x679C;&#x4E2D;&#x51FA;&#x73B0;&#xFF0C;&#x5373;&#x65E0;&#x7A7A;&#x683C;&#x7B49;&#x5B57;&#x7B26;</li>
+<li>\B&#xFF1A;&#x5339;&#x914D;&#x975E;&#x5355;&#x8BCD;&#x8FB9;&#x754C;&#xFF0C;&#x5728;&#x6700;&#x7EC8;&#x5339;&#x914D;&#x7ED3;&#x679C;&#x4E2D;&#xFF0C;\B&#x5339;&#x914D;&#x7684;&#x5185;&#x5BB9;&#x4E0D;&#x4F1A;&#x5728;&#x6700;&#x7EC8;&#x7ED3;&#x679C;&#x4E2D;&#x51FA;&#x73B0;</li>
+</ul>
+<pre><code class="lang-python">s =  <span class="hljs-string">&apos;abc abcde bc bcd&apos;</span>
+re.findall( <span class="hljs-string">r&apos;\bbc\b&apos;</span> , s ) 
+<span class="hljs-comment"># [&apos;bc&apos;]   # \b&#xFF0C;&#x5355;&#x8BCD;&#x8FB9;&#x754C;&#x4E0D;&#x7B97;&#x5728;&#x6700;&#x7EC8;&#x7ED3;&#x679C;&#xFF0C;&#x65E0;&#x7A7A;&#x683C;&#x5B57;&#x7B26;</span>
+
+re.findall( <span class="hljs-string">r&apos;\sbc\s&apos;</span> , s ) 
+<span class="hljs-comment"># [&apos; bc &apos;] # \s&#xFF0C;&#x5355;&#x8BCD;&#x8FB9;&#x754C;&#x7B97;&#x5728;&#x6700;&#x7EC8;&#x7ED3;&#x679C;&#xFF0C;&#x6709;&#x7A7A;&#x683C;&#x5B57;&#x7B26;</span>
+</code></pre>
+<h3 id="">(?:)</h3>
+<p>&#x5C06;&#x4E00;&#x6BB5;&#x89C4;&#x5219;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x6574;&#x4F53;&#x4F7F;&#x7528;&#xFF0C;&#x4E0D;&#x7B49;&#x4EF7;&#x4E8E;()&#xFF0C;()&#x4EE3;&#x8868;&#x7EC4;&#x7684;&#x6982;&#x5FF5;</p>
+<h3 id="">(?#)</h3>
+<p>&#x4EE3;&#x8868;&#x6CE8;&#x91CA;&#xFF0C;&#x5185;&#x90E8;&#x5185;&#x5BB9;&#x4F1A;&#x88AB;&#x5FFD;&#x7565;</p>
+<h3 id="ilmsux"><strong>(?iLmsux)</strong></h3>
+<p>&#x7F16;&#x8BD1;&#x9009;&#x9879;&#xFF0C;&#x53EA;&#x8981;&#x51FA;&#x73B0;&#x5728;&#x6B63;&#x5219;&#x4E2D;&#xFF0C;&#x5BF9;&#x6574;&#x6761;&#x8868;&#x8FBE;&#x5F0F;&#x90FD;&#x6709;&#x6548;</p>
+<ul>
+<li>i&#xFF1A;&#x4EE3;&#x8868;ignorecase&#xFF0C;&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;</li>
+<li>L&#xFF1A;&#x4EE3;&#x8868;local&#xFF0C;&#x672C;&#x5730;&#x5316;&#xFF0C;&#x5982;&#x5BF9;&#x4E8E;&#x82F1;&#x8BED;\w&#x4EE3;&#x8868;&#x6570;&#x5B57;&#x548C;&#x5B57;&#x6BCD;&#xFF0C;&#x5BF9;&#x4E8E;&#x6CD5;&#x8BED;&#x5219;&#x662F;&#x6570;&#x5B57;&#x548C;&#x6CD5;&#x6587;&#xFF0C;&#x7136;&#x5BF9;&#x4E8E;&#x4E2D;&#x6587;&#x6CA1;&#x7528;&#x3002;</li>
+<li><p>m&#xFF1A;&#x4EE3;&#x8868;mutiline&#xFF0C;&#x591A;&#x884C;&#xFF0C;&#x5982;^&#x3001;$&#x4F1A;&#x5728;&#x6BCF;&#x884C;&#x90FD;&#x53EF;&#x5339;&#x914D;&#xFF08;&#x9ED8;&#x8BA4;&#x53EA;&#x6709;&#x5F00;&#x59CB;&#x548C;&#x7ED3;&#x675F;&#xFF09;</p>
+</li>
+<li><p>s&#xFF1A;&#x4EE3;&#x8868;dotall&#xFF0C;. &#x5339;&#x914D;&#x6240;&#x6709;&#x7B26;&#x53F7;&#xFF08;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B; . &#x4E0D;&#x5339;&#x914D;&#x6362;&#x884C;&#x7B26;&#xFF09;</p>
+</li>
+<li>u&#xFF1A;&#x4EE3;&#x8868;unicode</li>
+<li>x&#xFF1A;&#x4EE3;&#x8868;verbose&#xFF0C;&#x8BE6;&#x7EC6;&#x6A21;&#x5F0F;&#xFF0C;&#x4E0D;&#x5E38;&#x7528;</li>
+</ul>
+<h3 id="&#x3001;&#x3001;&#xFF1F;&#x3001;m&#x3001;mn&#x3001;m">*&#x3001;+&#x3001;&#xFF1F;&#x3001;{m}&#x3001;{m,n}&#x3001;{m,}</h3>
+<ul>
+<li>*&#xFF1A;0&#x6B21;&#x6216;&#x591A;&#x6B21;</li>
+<li>+&#xFF1A;&#x4EE3;&#x8868;&#x81F3;&#x5C11;1&#x6B21;</li>
+<li>?&#xFF1A;&#x4EE3;&#x8868;0&#x6B21;&#x6216;1&#x6B21;</li>
+<li>{m}&#xFF1A;&#x7CBE;&#x786E;&#x5339;&#x914D;m&#x6B21;</li>
+<li>{m,n}&#xFF1A;&#x81F3;&#x5C11;&#x5339;&#x914D;m&#x6B21;&#xFF0C;&#x81F3;&#x591A;&#x5339;&#x914D;n&#x6B21;</li>
+<li>{m,}&#xFF1A;&#x81F3;&#x5C11;&#x5339;&#x914D;m&#x6B21;</li>
+</ul>
+<h3 id="&#x3001;&#x3001;">.*?&#x3001;.+?&#x3001;.??</h3>
+<p>?&#x7ED3;&#x5C3E;&#xFF0C;&#x4EE3;&#x8868;&#x975E;&#x8D2A;&#x5A6A;&#x5339;&#x914D;&#xFF0C;&#x5373;&#x6700;&#x5C0F;&#x5339;&#x914D;</p>
+<pre><code class="lang-python">s =<span class="hljs-string">r&apos;/* part 1 */ code /* part 2 */&apos;</span>
+re.findall( <span class="hljs-string">r&apos;/\*.*\*/&apos;</span> , s )
+<span class="hljs-comment"># [&apos;/* part 1 */ code /* part 2 */&apos;] # &#x8D2A;&#x5A6A;&#x5339;&#x914D;</span>
+
+re.findall( <span class="hljs-string">r&apos;/\*.*?\*/&apos;</span> , s ) 
+<span class="hljs-comment"># [&apos;/* part 1 */&apos;, &apos;/* part 2 */&apos;] # &#x975E;&#x8D2A;&#x5A6A;&#x5339;&#x914D;</span>
+</code></pre>
+<h3 id="&#x3001;&#x3001;&#x3001;">(?&lt;=&#x2026;)&#x3001;(?=&#x2026;)&#x3001;(?&lt;!&#x2026;)&#x3001;(?!&#x2026;)</h3>
+<p>&#x754C;&#x5B9A;&#xFF1A;&#x4E00;&#x5B9A;&#x8981;&#x662F;&#x4EC0;&#x4E48;&#x624D;&#x884C;&#xFF0C;&#x754C;&#x5B9A;&#x4E0D;&#x7B97;&#x5728;&#x6700;&#x7EC8;&#x7ED3;&#x679C;&#x5185;</p>
+<ul>
+<li>(?&lt;=&#x2026;)&#xFF1A;&#x524D;&#x5411;&#x754C;&#x5B9A;&#xFF0C;&#x53EA;&#x80FD;&#x7528;&#x5E38;&#x91CF;&#xFF0C;&#x5373;&#x4E0D;&#x80FD;&#x7528;&#x7279;&#x6B8A;&#x7684;&#x6B63;&#x5219;&#x8BED;&#x6CD5;</li>
+<li><p>(?=&#x2026;)&#xFF1A;&#x540E;&#x5411;&#x754C;&#x5B9A;</p>
+</li>
+<li><p>(?&lt;!&#x2026;)&#xFF1A;&#x524D;&#x5411;&#x975E;&#x754C;&#x5B9A;</p>
+</li>
+<li><p>(?!&#x2026;)&#xFF1A;&#x540E;&#x5411;&#x975E;&#x754C;&#x5B9A;</p>
+</li>
+</ul>
+<pre><code class="lang-python">s=<span class="hljs-string">r&apos;/* comment 1 */  code  /* comment 2 */&apos;</span>
+re.findall( <span class="hljs-string">r&apos;(?&lt;=/\*).+?(?=\*/)&apos;</span> , s )
+<span class="hljs-comment"># [&apos; comment 1 &apos;, &apos; comment 2 &apos;]</span>
+
+s = <span class="hljs-string">&apos;aaa111aaa , bbb222 , 333ccc &apos;</span>
+re.findall( <span class="hljs-string">r&apos;(?&lt;=[a-z]+)\d+(?=[a-z]+)&apos;</span> , s ) 
+<span class="hljs-comment"># error: look-behind requires fixed-width pattern # &#x524D;&#x5411;&#x754C;&#x5B9A;&#xFF0C;&#x975E;&#x5E38;&#x91CF;&#xFF0C;&#x9519;&#x8BEF;&#x6848;&#x4F8B;</span>
+
+re.findall( <span class="hljs-string">r&apos;\d+(?=[a-z]+)&apos;</span>, s )
+<span class="hljs-comment"># [&apos;111&apos;, &apos;333&apos;] # &#x540E;&#x5411;&#x754C;&#x5B9A;&#xFF0C;&#x975E;&#x5E38;&#x91CF;&#xFF0C;&#x53EF;&#x884C;</span>
+
+re.findall( <span class="hljs-string">r&apos;\d+(?!\w+)&apos;</span> , s ) <span class="hljs-comment"># &#x540E;&#x5411;&#x975E;&#x754C;&#x5B9A;&#xFF0C;&#x975E;&#x5E38;&#x91CF;</span>
+<span class="hljs-comment"># [&apos;222&apos;]</span>
+</code></pre>
+<h2 id="&#x7EC4;">&#x7EC4;</h2>
+<h3 id="&#xFF08;&#xFF09;">&#xFF08;&#xFF09;</h3>
+<p>&#x65E0;&#x547D;&#x540D;&#x7EC4;&#xFF0C;&#x53EA;&#x8FD4;&#x56DE;()&#x5305;&#x88F9;&#x7684;&#x90E8;&#x5206;&#xFF0C;&#x5176;&#x4ED6;&#x5339;&#x914D;&#x90E8;&#x5206;&#x4E0D;&#x8FD4;&#x56DE;</p>
+<pre><code class="lang-python">s = <span class="hljs-string">&apos;aaa111aaa , bbb222 , 333ccc &apos;</span>
+re.findall (<span class="hljs-string">r&apos;[a-z]+(\d+)[a-z]+&apos;</span> , s )
+<span class="hljs-comment"># [&apos;111&apos;]</span>
+</code></pre>
+<h3 id="p">(?P\<name\>&#x2026;)</name\></h3>
+<p>&#x547D;&#x540D;&#x7EC4;</p>
+<h3 id="pname">(?P=name)</h3>
+<p>&#x901A;&#x8FC7;&#x540D;&#x79F0;&#xFF0C;&#x8C03;&#x7528;&#x5DF2;&#x5339;&#x914D;&#x5230;&#x7684;&#x547D;&#x540D;&#x7EC4;</p>
+<pre><code class="lang-python">s=<span class="hljs-string">&apos;aaa111aaa,bbb222,333ccc,444ddd444,555eee666,fff777ggg&apos;</span>
+re.findall( <span class="hljs-string">r&apos;([a-z]+)\d+([a-z]+)&apos;</span> , s ) <span class="hljs-comment"># &#x627E;&#x51FA;&#x4E2D;&#x95F4;&#x5939;&#x6709;&#x6570;&#x5B57;&#x7684;&#x5B57;&#x6BCD;</span>
+<span class="hljs-comment"># [(&apos;aaa&apos;, &apos;aaa&apos;), (&apos;fff&apos;, &apos;ggg&apos;)]</span>
+
+re.findall( <span class="hljs-string">r&apos;(?P&lt;g1&gt;[a-z]+)\d+(?P=g1)&apos;</span> , s ) <span class="hljs-comment"># &#x627E;&#x51FA;&#x4E2D;&#x95F4;&#x5939;&#x6709;&#x6570;&#x5B57;,&#x4E14;&#x524D;&#x540E;&#x4E24;&#x8FB9;&#x76F8;&#x540C;&#x7684;&#x5B57;&#x6BCD;</span>
+<span class="hljs-comment"># [&apos;aaa&apos;]</span>
+</code></pre>
+<h3 id="number">\number</h3>
+<p>&#x901A;&#x8FC7;&#x5E8F;&#x53F7;&#xFF0C;&#x8C03;&#x7528;&#x5DF2;&#x5339;&#x914D;&#x5230;&#x7684;&#x7EC4;&#xFF08;&#x547D;&#x540D;&#x3001;&#x672A;&#x547D;&#x540D;&#x90FD;&#x53EF;&#x4EE5;&#xFF09;&#xFF0C;&#x5E8F;&#x53F7;&#x4ECE;1&#x5F00;&#x59CB;</p>
+<pre><code class="lang-python">re.findall( <span class="hljs-string">r&apos;(?P&lt;g1&gt;[a-z]+)\d+\1&apos;</span> , s ) <span class="hljs-comment"># &#x547D;&#x540D;&#x7EC4;</span>
+<span class="hljs-comment"># [&apos;aaa&apos;]</span>
+re.findall( <span class="hljs-string">r&apos;([a-z]+)\d+\1&apos;</span> , s ) <span class="hljs-comment"># &#x672A;&#x547D;&#x540D;&#x7EC4;</span>
+<span class="hljs-comment"># [&apos;aaa&apos;]</span>
+</code></pre>
+<h3 id="idnameyes-patternno-pattern"><strong>(?(</strong> id/name)yes-pattern|no-pattern)</h3>
+<p>&#x82E5;&#x524D;&#x9762;&#x4F7F;&#x7528;&#x6307;&#x5B9A;&#x7EC4;&#xFF08;&#x5229;&#x7528;&#x5E8F;&#x53F7;id&#xFF0C;&#x6216;&#x8005;&#x540D;&#x79F0;name&#xFF09;&#x7684;&#x6A21;&#x5F0F;&#xFF0C;&#x5219;&#x8FD9;&#x91CC;&#x4E00;&#x5B9A;&#x9700;&#x8981;&#x6EE1;&#x8DB3;yes-pattern&#x7684;&#x6A21;&#x5F0F;&#xFF0C;&#x5426;&#x5219;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;no-pattern&#x3002;</p>
+<pre><code class="lang-python">s=<span class="hljs-string">&apos;&lt;usr1@mail1&gt;  usr2@maill2&apos;</span>
+re.findall( <span class="hljs-string">r&apos;(&lt;)?\s*(\w+@\w+)\s*(?(1)&gt;)&apos;</span> , s ) <span class="hljs-comment"># (?(1)&gt;) &#x7B49;&#x4EF7; (?(1)&gt;|) </span>
+<span class="hljs-comment"># [(&apos;&lt;&apos;, &apos;usr1@mail1&apos;), (&apos;&apos;, &apos;usr2@maill2&apos;)]</span>
+
+s=<span class="hljs-string">&apos;&lt;usr1@mail1&gt;  usr2@maill2 &lt;usr3@mail3   usr4@mail4&gt;  &lt; usr5@mail5 &apos;</span>
+<span class="hljs-comment"># [(&apos;&lt;&apos;, &apos;usr1@mail1&apos;), (&apos;&apos;, &apos;usr2@maill2&apos;), (&apos;&apos;, &apos;usr3@mail3&apos;), (&apos;&apos;, &apos;usr4@mail4&apos;), (&apos;&apos;, &apos;usr5@mail5&apos;)]</span>
+</code></pre>
+<h2 id="&#x51FD;&#x6570;">&#x51FD;&#x6570;</h2>
+<h3 id="&#x641C;&#x7D22;">&#x641C;&#x7D22;</h3>
+<p><code>re.match</code>&#xFF1A;&#x4ECE;&#x5F00;&#x59CB;&#x4F4D;&#x7F6E;&#x5339;&#x914D;&#xFF0C;&#x5982;&#x679C;&#x7B2C;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#x5931;&#x8D25;&#xFF0C;&#x5C31;&#x653E;&#x5F03;&#x5BFB;&#x627E;&#x3002;&#x8FD4;&#x56DE;&#x7684;&#x662F; match object&#xFF0C;&#x5931;&#x8D25;&#x4E3A;None&#x3002;</p>
+<p><code>re.search</code>&#xFF1A;&#x641C;&#x7D22;&#x6574;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x627E;&#x5230;&#x4E00;&#x4E2A;&#x5C31;&#x8FD4;&#x56DE;&#x3002;&#x6210;&#x529F;&#x8FD4;&#x56DE;&#x7684;&#x662F; match object&#xFF0C;&#x5931;&#x8D25;&#x4E3A;None&#x3002;</p>
+<p><code>re.findall</code>&#xFF1A;&#x641C;&#x7D22;&#x6574;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8FD4;&#x56DE;&#x6240;&#x6709;&#x627E;&#x5230;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x6210;&#x529F;&#x8FD4;&#x56DE;&#x7684;&#x662F;str list&#xFF0C;&#x5931;&#x8D25;&#x4E3A;[]</p>
+<p><code>re.finditer</code>&#xFF1A;&#x641C;&#x7D22;&#x6574;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6240;&#x6709;&#x627E;&#x5230;&#x7684; match object&#x7684;&#x8FED;&#x4EE3;&#x5668;&#x3002;&#x533A;&#x522B;&#x4E8E;<code>re.search</code>&#xFF0C;&#x53EA;&#x627E;&#x5230;&#x4E00;&#x4E2A;&#x3002;</p>
+<h3 id="&#x66FF;&#x6362;">&#x66FF;&#x6362;</h3>
+<p><code>re.sub</code>&#xFF1A;&#x8FD4;&#x56DE;&#x88AB;&#x66FF;&#x6362;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<p><code>re.subn</code>&#xFF1A;&#x8FD4;&#x56DE;&#x88AB;&#x66FF;&#x6362;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x88AB;&#x66FF;&#x6362;&#x6B21;&#x6570;&#x3002;</p>
+<h3 id="&#x5207;&#x7247;">&#x5207;&#x7247;</h3>
+<p><code>re.split</code>&#xFF1A;&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32;&#x5207;&#x7247;&#x3002;</p>
+<pre><code class="lang-python">s=<span class="hljs-string">&apos; I have a dog   ,   you have a dog  ,  he have a dog &apos;</span>
+re.split( <span class="hljs-string">&apos;\s*,\s*&apos;</span> , s )
+<span class="hljs-comment"># [&apos; I have a dog&apos;, &apos;you have a dog&apos;, &apos;he have a dog &apos;]</span>
+</code></pre>
+<h3 id="&#x53D6;&#x6D88;&#x6B63;&#x5219;&#x8F6C;&#x4E49;">&#x53D6;&#x6D88;&#x6B63;&#x5219;&#x8F6C;&#x4E49;</h3>
+<p><code>re.escape</code>&#xFF1A;&#x53D6;&#x6D88;&#x6B63;&#x5219;&#x5B57;&#x7B26;&#x7684;&#x8F6C;&#x4E49;&#xFF0C;&#x76F4;&#x63A5;&#x5339;&#x914D;&#x5B57;&#x7B26;&#xFF0C;&#x591A;&#x7528;&#x4E8E;&#x5339;&#x914D;&#x5B57;&#x7B26;&#x4E2D;&#x542B;&#x5F88;&#x591A;&#x6B63;&#x5219;&#x8F6C;&#x4E49;&#x5B57;&#x7B26;&#x7684;&#x60C5;&#x51B5;&#x3002;</p>
+<pre><code class="lang-python">s= <span class="hljs-string">&apos;111 222 (*+?) 333&apos;</span>
+rule= re.escape( <span class="hljs-string">r&apos;(*+?)&apos;</span> )
+re.findall( rule , s )
+[<span class="hljs-string">&apos;(*+?)&apos;</span>]
+</code></pre>
+<p>&#x6CE8;&#x610F;&#x4E0E; <code>r&apos;&#x2026;&apos;</code> &#x7684;&#x533A;&#x522B;&#xFF0C;<code>r</code>&#x662F;&#x53D6;&#x6D88;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x8F6C;&#x4E49;&#xFF0C;&#x6BD4;&#x5982;<code>r&apos;\n&apos;</code>&#x5C31;&#x662F;&#x5339;&#x914D;&#x4E24;&#x4E2A;<code>\</code>&#x3001;<code>n</code>&#x5B57;&#x7B26;&#xFF0C;&#x800C;&#x975E;&#x6362;&#x884C;&#x7B26;&#x3002;</p>
+<p><code>r&apos;\n&apos;</code>&#x867D;&#x7136;&#x4EE3;&#x8868;&#x4E24;&#x4E2A;<code>\</code>&#x3001;<code>n</code>&#x5B57;&#x7B26;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x6B63;&#x5219;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8FD8;&#x4F1A;&#x88AB;&#x6B63;&#x5219;&#x8F6C;&#x4E49;&#x4E00;&#x6B21;&#x53D8;&#x6210;&#x6362;&#x884C;&#x7B26;</p>
+<p>&#x53C2;&#x8003; <a href="https://www.cnblogs.com/mzc1997/p/7689235.html" target="_blank">&#x82E5;&#x7231;&#x9694;&#x5C71;&#x9694;&#x6D77;&#xFF0C;&#x90A3;&#x5C31;&#x5E73;&#x5C71;&#x5E73;&#x6D77;</a></p>
+<pre><code class="lang-python">s = <span class="hljs-string">&apos;3\8&apos;</span> 
+re.findall(<span class="hljs-string">&apos;\d+\\\\\d+&apos;</span>, s)  <span class="hljs-comment"># \\\\ &#x5148;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x4E49;&#xFF0C;&#x8F6C;&#x4E3A;\\&#xFF0C;&#x518D;&#x6B63;&#x5219;&#x8F6C;&#x4E49;&#x4E3A;\</span>
+re.findall(<span class="hljs-string">r&apos;\d+\\\d+&apos;</span>, s) <span class="hljs-comment"># \\ &#x76F4;&#x63A5;&#x6B63;&#x5219;&#x8F6C;&#x4E49;&#x4E3A;\</span>
+</code></pre>
+<h2 id="&#x7EC4;&#x4E0E;match&#x5BF9;&#x8C61;">&#x7EC4;&#x4E0E;match&#x5BF9;&#x8C61;</h2>
+<pre><code class="lang-python">p=re.compile( <span class="hljs-string">r&apos;(?P&lt;name&gt;[a-z]+)\s+(?P&lt;age&gt;\d+)\s+(?P&lt;tel&gt;\d+)&apos;</span> , re.I )
+p.groupindex
+<span class="hljs-comment"># {&apos;age&apos;: 2, &apos;tel&apos;: 3, &apos;name&apos;: 1}</span>
+s=<span class="hljs-string">&apos;Tom 24 88888888 &lt;=&apos;</span>
+m=p.search(s)
+m.groups() <span class="hljs-comment"># &#x5339;&#x914D;&#x7684;&#x5404;&#x7EC4;</span>
+<span class="hljs-comment"># (&apos;Tom&apos;, &apos;24&apos;, &apos;88888888&apos;)</span>
+m.group(<span class="hljs-string">&apos;name&apos;</span>) <span class="hljs-comment"># &#x901A;&#x8FC7;&#x540D;&#x79F0;&#x8FD4;&#x56DE;&#x5339;&#x914D;&#x7EC4;</span>
+<span class="hljs-comment"># &apos;Tom&apos;</span>
+m.group(<span class="hljs-number">1</span>) <span class="hljs-comment"># &#x901A;&#x8FC7;&#x5E8F;&#x53F7;&#x8FD4;&#x56DE;&#x5339;&#x914D;&#x7EC4;</span>
+<span class="hljs-comment"># &apos;Tom&apos;</span>
+m.group(<span class="hljs-number">0</span>) <span class="hljs-comment"># &#x8FD4;&#x56DE;&#x6574;&#x4F53;&#x7684;&#x5339;&#x914D;&#x4E32;</span>
+<span class="hljs-comment"># &apos;Tom 24 88888888&apos;</span>
+m.group()  <span class="hljs-comment"># m.group(0) &#x7B49;&#x4EF7; m.group()</span>
+<span class="hljs-comment"># &apos;Tom 24 88888888&apos;</span>
+</code></pre>
+<h2 id="&#x53C2;&#x8003;&#x8D44;&#x6599;">&#x53C2;&#x8003;&#x8D44;&#x6599;</h2>
+<p><a href="https://blog.csdn.net/weixin_40907382/article/details/79654372" target="_blank">python | &#x53F2;&#x4E0A;&#x6700;&#x5168;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="lxml速查.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: lxml速查">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"re","level":"1.9","depth":1,"previous":{"title":"lxml速查","level":"1.8","depth":1,"path":"lxml速查.md","ref":"lxml速查.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"re.md","mtime":"2019-08-31T03:00:32.583Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-31T03:05:04.532Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
