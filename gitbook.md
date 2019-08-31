@@ -1,6 +1,9 @@
-# GitBook
+---
+description: >-
+  GitBook是一个基于node.js的命令行工具，可以将MarkDown文章转为HTML、PDF等格式电子书，可以理解为一种文档转换工具（MarkDown=>HTML）。
+---
 
-GitBook是一个基于node.js的命令行工具，可以将MarkDown文章转为HTML、PDF等格式电子书，可以理解为一种文档转换工具（MarkDown=&gt;HTML）。
+# GitBook
 
 ## 1. 安装
 
@@ -35,4 +38,10 @@ GitBook是一个基于node.js的命令行工具，可以将MarkDown文章转为H
 将Markdown格式的数据转为html，并借助node.js在本地搭建一个web页面
 
 > gitbook serve
+
+## 3. Amazing网页版
+
+在gitbook的网页版上直接导入git工程，amazing好用~
+
+
 
