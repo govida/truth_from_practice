@@ -9,4 +9,9 @@
 * [调度方案](tiao-du-fang-an.md)
 * [lxml速查](lxml-su-cha.md)
 * [re](re.md)
+* [Mysql](mysql.md)
+* [Python Lib](python-lib.md)
+* [Peewee](peewee.md)
+* [Python 坑](python-keng.md)
+* [语录](yu-lu.md)
 

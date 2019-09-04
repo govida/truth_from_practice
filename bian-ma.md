@@ -88,6 +88,7 @@ print(type(s2)) #<class 'bytes'>
 相关链接：
 
 * [python编码问题大终结](https://www.cnblogs.com/vipchenwei/p/6993788.html)
+* [python编码及转换（简介明了版）](https://www.cnblogs.com/xyn123/p/8869754.html)
 
 ## 2. Requests
 
