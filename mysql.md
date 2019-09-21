@@ -24,6 +24,19 @@ varchar需要一个额外的字段来计算具体字符串需要多少空间，2
   >
   > set global max\_allowed\_packet = 100\*1024\*1024
 
+## Deadlock found when trying to get lock; try restarting transaction
+
+多个事务以不同顺序使用相同的`若干`记录，锁死了
+
+* connection 1: locks key\(1\), locks key\(2\);
+* connection 2: locks key\(2\), locks key\(1\);
+
+这里`若干`等价于批量，该现象多发生于批量修改数据中
+
+解决方法很trick，将批量处理的记录按照某种key排序一下即可，这样多个事务就会有序的获取相应的锁，拿不到的就会等待
+
+[How to avoid mysql 'Deadlock found when trying to get lock; try restarting transaction'](https://stackoverflow.com/questions/2332768/how-to-avoid-mysql-deadlock-found-when-trying-to-get-lock-try-restarting-trans)
+
 ## 字符串与整型作为主键
 
 * 字符串主键在插入过程，由于key不规律，页没满就发生分裂，页数特别多；而整型是顺序插入，页利用率高
@@ -65,7 +78,7 @@ mysql innoDB是这个隔离级别。
 
 事务排序就安全了
 
-### 机制加锁
+### 锁
 
 #### 按类型
 
@@ -84,13 +97,25 @@ mysql innoDB是这个隔离级别。
 
 ### 存储引擎
 
-innoDB
+innoDB、NDB Cluster、Falcon
 
 ### 多版本并发控制（MVCC）
 
+乐观锁的一种
+
+* 会对每条记录增加额外两个字段，创建（指新建、更新）版本号，删除版本号
+* 事务读取规则：
+  * 删除版本号为空或者版本号&gt;事务版本号，即在事务读取记录时，该记录确实存在
+  * 创建版本号&lt;=事务版本号，即记录是事务自己创建的（=），或者在该事务运行之前其他事务插入的（&lt;）
+
+通过这两个字段，可以确定事务在执行过程中，是否真的有冲突，如果没有，则可以顺利进行，避免悲观锁，提高并发。
+
 [Mysql中MVCC的使用及原理详解](https://blog.csdn.net/w2064004678/article/details/83012387)
 
+### 摘要
 
+* Mysql通过`锁`和`MVCC`来保证隔离性
+* 所有记录修改都会被包裹进事务中，即使是一条简单的insert语句（默认是autocommit）
 
 
 

@@ -14,4 +14,9 @@
 * [Peewee](peewee.md)
 * [Python 坑](python-keng.md)
 * [语录](yu-lu.md)
+* [nginx](nginx.md)
+* [tornado](tornado.md)
+* [ES](es.md)
+* [Kafka](kafka.md)
+* [一致性hash](yi-zhi-xing-hash.md)
 

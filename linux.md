@@ -55,7 +55,7 @@ description: 常用命令集
 > awk '{print $NF}' test.txt
 
 * 输出每行的最后一列
-* $\(NF-1\) 代表倒数第二行
+* $\(NF-1\) 代表倒数第二列
 
 > awk '{print }' test.txt
 

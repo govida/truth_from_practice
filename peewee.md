@@ -37,5 +37,38 @@ User.select().where(reduce(operator.or_, clauses))
 
 [绿蚁酒](https://stackoverflow.com/questions/22238194/python-peewee-dynamically-or-clauses)
 
+## 事务管理
+
+db.atomic\(\)
+
+[peewee 事务](https://www.cnblogs.com/miaojiyao/articles/5235738.html)，差点意思不展开搞了
+
+## on\_conflict & Upsert
+
+原型
+
+```sql
+# update
+INSERT INTO table (a,b,c) VALUES (1,2,3)
+  ON DUPLICATE KEY UPDATE c=c+1;
+# preserve
+INSERT INTO table (a,b,c) VALUES (1, 2, 3)
+   ON DUPLICATE KEY UPDATE b = VALUES(b), c = VALUES(c)
+```
+
+demo
+
+```python
+User
+  .insert(username=username, last_login=now, login_count=1)
+  .on_conflict(
+    conflict_target=[User.username],
+    preserve=[User.last_login],
+    update={User.login_count: User.login_count + 1})
+  .execute()
+```
+
+参考 [Upsert support](https://github.com/coleifer/peewee/issues/1307)
+
 
 
