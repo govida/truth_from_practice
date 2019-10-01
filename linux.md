@@ -4,6 +4,10 @@ description: 常用命令集
 
 # Linux
 
+## \#!
+
+指定脚本解释器，比如可以用python解释器，解释python脚本
+
 ## &gt;、&&gt;
 
 * &gt;：代表将标准输出重定向于某个文件
