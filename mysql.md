@@ -117,7 +117,13 @@ innoDB、NDB Cluster、Falcon
 * Mysql通过`锁`和`MVCC`来保证隔离性
 * 所有记录修改都会被包裹进事务中，即使是一条简单的insert语句（默认是autocommit）
 
+### show processlist
 
+定制 processlist：
+
+> ```text
+> SELECT * FROM INFORMATION_SCHEMA.PROCESSLIST
+> ```
 
 
 
