@@ -48,5 +48,9 @@ for i in nums:
 #second iteration
 ```
 
+## 队列
 
+python队列是线程安全的，无需自行加锁了，这就给我们很多操作的空间
+
+PS：happybase 内部连接池用了队列，但还加的锁，就感觉设计者有点笨，或者是我没考虑到？
 

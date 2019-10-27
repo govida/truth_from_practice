@@ -36,7 +36,19 @@ auto.offset.reset
 
 注意是无提交的offset时，如果之前提交过，可以无视这个参数
 
+## kafka-python
 
+开启kafka的logger
+
+```python
+import logging
+import sys
+logger = logging.getLogger('kafka')
+logger.addHandler(logging.StreamHandler(sys.stdout))
+logger.setLevel(logging.DEBUG)
+```
+
+默认情况下，kafka将log输入到NullHandler中了
 
 
 

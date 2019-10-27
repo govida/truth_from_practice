@@ -2,7 +2,7 @@
 description: 尊贵的关系型数据库
 ---
 
-# Mysql
+# MySQL
 
 ## 安装
 
@@ -117,7 +117,7 @@ innoDB、NDB Cluster、Falcon
 * Mysql通过`锁`和`MVCC`来保证隔离性
 * 所有记录修改都会被包裹进事务中，即使是一条简单的insert语句（默认是autocommit）
 
-### show processlist
+## show processlist
 
 定制 processlist：
 
@@ -125,7 +125,14 @@ innoDB、NDB Cluster、Falcon
 > SELECT * FROM INFORMATION_SCHEMA.PROCESSLIST
 > ```
 
+## 大分区表count
 
+> ```sql
+> select  table_rows
+> from    information_schema.tables
+> where   table_schema = 'database_name'
+>   and   table_name = 'table_name' ;
+> ```
 
 
 

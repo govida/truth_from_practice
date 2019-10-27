@@ -80,6 +80,17 @@ print result[0].tail
 print etree.tostring(result[0],method='text',with_tail=False,encoding='utf-8')
 ```
 
+## 解析CDATA
+
+parser默认会丢弃**&lt;!\[cdata\[......\]\]&gt;**的标签和其中的内容，但是在解析微信数据时，就会有问题
+
+```python
+parser = etree.xmlparser(strip_cdata=false)
+root = etree.fromstring(str_xml, parser) 
+```
+
+[lxml处理CDATA的备忘](http://www.makaidong.com/%E5%8D%9A%E5%AE%A2%E5%9B%AD%E7%83%AD/34970.shtml)
+
 ## 参考资料
 
 * [逝者如斯，而未尝往也](https://www.cnblogs.com/zhangxinqi/p/9210211.html#_label8)
